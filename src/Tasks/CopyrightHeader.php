@@ -43,7 +43,7 @@ class CopyrightHeader extends JTask implements TaskInterface
 	public function run()
 	{
 		$this->say("Updating / adding copyright headers");
-		$text    = $this->replaceInText(trim($this->getJConfig()->header->text));
+		$text    = $this->replaceInText($this->getJConfig()->header->text);
 		$excludeList = $this->getJConfig()->header->exclude;
 
 		if ($excludeList !== '')
