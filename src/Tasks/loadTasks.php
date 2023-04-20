@@ -55,15 +55,13 @@ trait loadTasks
 	/**
 	 * The CopyrightHeader task
 	 *
-	 * @param   array  $params  Opt params
-	 *
 	 * @return  CopyrightHeader
 	 *
 	 * @since   1.0
 	 */
-	protected function taskCopyrightHeaders($params)
+	protected function taskCopyrightHeaders()
 	{
-		return new CopyrightHeader($params);
+		return new CopyrightHeader();
 	}
 
 	/**
