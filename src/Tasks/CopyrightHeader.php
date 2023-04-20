@@ -48,7 +48,7 @@ class CopyrightHeader extends JTask implements TaskInterface
 
 		if ($excludeList !== '')
 		{
-			$exclude = explode(",", trim());
+			$exclude = explode(",", trim($excludeList));
 		}
 
 		$path      = realpath($this->getJConfig()->source);
