@@ -130,12 +130,12 @@ class CopyrightHeader extends JTask implements TaskInterface
 		{
 			$l = trim($l);
 
-			if (strpos($l, "<?php") === 0 || $l == "")
+			if (strpos($l, "<?php") === 0)
 			{
 				continue;
 			}
 
-			if (strpos($l, "/**") !== false || strpos($l, "*") !== false || strpos($l, "*/") !== false)
+			if ($l == "" || strpos($l, "/**") !== false || strpos($l, "*") !== false || strpos($l, "*/") !== false)
 			{
 				unset($lines[$i]);
 
